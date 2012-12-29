@@ -14,7 +14,7 @@ This plugin allows you to add shopping cart functionality to single image (attac
 
 The plugin also provides a widget, shortcode, and template functions for displaying the shopping cart on single image (attachment) pages, single Posts, and Pages.
 
-For more information on ways to use this and other PhotoPress plugin see my [WordPress For Photographers e-Book](http://www.peteradamsphoto.com/?page_id=3357 "WordPress For Photographers").
+For more information on ways to use this and other PhotoPress plugins see my [WordPress For Photographers e-Book](http://www.peteradamsphoto.com/?page_id=3357 "WordPress For Photographers").
 
 == Installation ==
 
