@@ -6,7 +6,7 @@ Requires at least: 3.2.1
 Tested up to: 3.5
 Stable tag: 1.0
 
-This plugin dynamically adds shopping cart functionality to Image Attachment Pages (or single Posts, or Pages) for use in selling prints/merchandise of any image on your WordPress website. 
+This plugin dynamically adds shopping cart functionality to Image Attachment Pages (or single Posts, or Pages) for use in selling prints/merchandise.
 
 == Description ==
 
