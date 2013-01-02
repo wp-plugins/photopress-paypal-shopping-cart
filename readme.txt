@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: photos, images, taxonomies, ecommerce, shopping carts, print sales, selling prints
 Requires at least: 3.2.1
 Tested up to: 3.5
-Stable tag: 1.0
+Stable tag: 1.1
 
 This plugin dynamically adds shopping cart functionality to Image Attachment Pages (or single Posts, or Pages) for use in selling prints/merchandise.
 
@@ -54,3 +54,7 @@ Also, This feature is implemented by this plugin and is not part of the WordPres
 = 1.0 =
 
 Initial version of plugin.
+
+= 1.1 = 
+
+Adding missing sidebar registration for image page.
