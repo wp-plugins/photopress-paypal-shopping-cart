@@ -384,4 +384,9 @@ class papt_displaySingleProductBuyButtonWidget extends WP_Widget {
 
 add_action( 'init', array('papt_spsc', 'init' ), 98 );
 add_action( 'plugins_loaded', array('papt_spsc', 'registerDependantActions' ) );
+register_sidebar(array(
+  'name' => 'PhotoPress Image Page Sidebar',
+  'id' => 'papt-image-sidebar',
+  'description' => 'Widgets in this area will be shown on image (attachment) page templates.'
+));
 ?>
