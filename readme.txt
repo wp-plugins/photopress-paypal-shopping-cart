@@ -3,8 +3,8 @@ Contributors: padams
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F83AGPR2W5AXS
 Tags: photos, images, taxonomies, ecommerce, shopping carts, print sales, selling prints
 Requires at least: 3.2.1
-Tested up to: 3.5
-Stable tag: 1.1
+Tested up to: 3.8
+Stable tag: 1.2
 
 This plugin dynamically adds shopping cart functionality to Image Attachment Pages (or single Posts, or Pages) for use in selling prints/merchandise.
 
@@ -14,7 +14,7 @@ This plugin allows you to add shopping cart functionality to single image (attac
 
 The plugin also provides a widget, shortcode, and template functions for displaying the shopping cart on single image (attachment) pages, single Posts, and Pages.
 
-For more information on ways to use this and other PhotoPress plugins see my [WordPress For Photographers e-Book](http://www.peteradamsphoto.com/?page_id=3357 "WordPress For Photographers").
+For more information on ways to use this and other PhotoPress plugins see my [WordPress For Photographers e-Book](http://wpphotog.com/product/the-guide-to-wordpress-for-photographers/ "WordPress For Photographers").
 
 == Installation ==
 
