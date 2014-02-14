@@ -31,15 +31,23 @@ For more information on ways to use this and other PhotoPress plugins see my [Wo
 
 = Why do I need this plugin? =
 
-You want a very simple and easy way to take orders for prints/merchandise of a large number of photos that appear on your website.
+You want a very simple and easy way to sell prints (or other merchadise) of images that appear on your website.
 
 = Does this plugin handle the actual printing and delivery of photos? =
 
-No. Printing and delivering the images is up to you. This plugin just allows visitors to order and pay for prints via Paypal.
+No. Printing and delivering the images is up to you. This plugin just allows visitors to order and pay for the prints via Paypal.
 
-= Do I need a Paypal Account to Use this Plugin =
+= Do I need a Paypal account to use this plugin? =
 
 Yes. This plugin utilizes *your* Paypal account.
+
+= Can I have different purchase variations? =
+
+Yes. You can create an unlimited number of purchase variations such as size and finish. Variations take the Form of `label:price` (i.e. 11 x 14 Glossy:$100 ) and are entered via the Purchase Variations Media admin page.
+
+= Can I choose which variations are available on an image by image basis? =
+
+Yes. Variations can be selected via the image's attachment page. If no local variation choices are made for an image, all variations will be presented. This backfill behavior can be turned off by setting the "explicit mode" option on the settings admin page.
 
 = Can I have different prices per each product variation? =
 
@@ -58,3 +66,9 @@ Initial version of plugin.
 = 1.1 = 
 
 Adding missing sidebar registration for image page.
+
+= 1.2.= 
+
+- added new custom taxonomy for storing purchase variations
+- purchase variations can now be set on an image by image basis
+- added "explicit mode" option which only diplays purchase variations explicitly set on each image.
