@@ -481,7 +481,8 @@ class papt_displaySingleProductBuyButtonWidget extends WP_Widget {
 		
 		extract( $args );
 		
-		
+		$product_name = get_the_title( $post->ID );
+		//print_r($product_name);
 		
 		$form = papt_spsc::singleProductShortcodeHandler( 
 			array(
