@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: photos, images, taxonomies, ecommerce, shopping carts, print sales, selling prints
 Requires at least: 3.2.1
 Tested up to: 3.8
-Stable tag: 1.2
+Stable tag: 1.3
 
 This plugin dynamically adds shopping cart functionality to Image Attachment Pages (or single Posts, or Pages) for use in selling prints/merchandise.
 
@@ -72,3 +72,7 @@ Adding missing sidebar registration for image page.
 - added new custom taxonomy for storing purchase variations
 - purchase variations can now be set on an image by image basis
 - added "explicit mode" option which only diplays purchase variations explicitly set on each image.
+
+= 1.3 =
+
+- fixed broken product name when adding item to cart.
