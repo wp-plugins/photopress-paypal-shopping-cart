@@ -178,7 +178,7 @@ class papt_spsc {
 	 * @param $product_name	string	the name of the product to be purchased
 	 * @param $variations	array	an array of product variations
 	 */
-	static function generateForm ($product_name, $variations = array(), $echo = false ) {
+	static function generateForm ($product_name, $variations = array(), $shipping = 0, $echo = false ) {
 	
 		$addToCartLabel = get_option('addToCartButtonName');   
 	    
@@ -212,7 +212,7 @@ class papt_spsc {
 		$form .= sprintf('<input type="hidden" name="product" value="%s" />', $product_name);
 		$form .= '<input type="hidden" name="price" value="0" />';
 		$form .= sprintf('<input type="hidden" name="product_tmp" value="%s" />', $product_name);
-		$form .= '<input type="hidden" name="shipping" value="50" />';
+		$form .= sprintf('<input type="hidden" name="shipping" value="%s" />', $shipping );
 		$form .= sprintf('<input type="hidden" name="cartLink" value="%s" />', cart_current_page_url() );
 		$form .= '<input type="hidden" name="addcart" value="1" />';
 		$form .= '</form>';
@@ -369,7 +369,7 @@ class papt_spsc {
 					
 				$variations = $tax_variations;
 				
-				return papt_spsc::generateForm( $product_name, $variations);
+				return papt_spsc::generateForm( $product_name, $variations, $shipping);
 			
 			} else {
 		    // backwards compatability for old widget option

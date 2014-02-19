@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: photos, images, taxonomies, ecommerce, shopping carts, print sales, selling prints
 Requires at least: 3.2.1
 Tested up to: 3.8
-Stable tag: 1.3
+Stable tag: 1.4
 
 This plugin dynamically adds shopping cart functionality to Image Attachment Pages (or single Posts, or Pages) for use in selling prints/merchandise.
 
@@ -76,3 +76,7 @@ Adding missing sidebar registration for image page.
 = 1.3 =
 
 - fixed broken product name when adding item to cart.
+
+= 1.4 =
+
+- fixed broken global shipping costs
