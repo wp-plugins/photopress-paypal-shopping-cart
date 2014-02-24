@@ -1,7 +1,7 @@
 === PhotoPress - PayPal Shopping Cart ===
 Contributors: padams
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F83AGPR2W5AXS
-Tags: photos, images, taxonomies, ecommerce, shopping carts, print sales, selling prints
+Tags: photos, images, taxonomies, ecommerce, shopping carts, print sales, selling prints, selling photos, print ordering
 Requires at least: 3.2.1
 Tested up to: 3.8
 Stable tag: 1.4
@@ -10,11 +10,23 @@ This plugin dynamically adds shopping cart functionality to Image Attachment Pag
 
 == Description ==
 
-This plugin allows you to add shopping cart functionality to single image (attachment) pages so that visitors can order prints or other merchandise of any image on your website. Specifically designed for photographers who want to enable print ordering for large image catalogs, this plugin utilizes the WordPress Simple Paypal Shopping Cart plugin to implement the shopping cart and accept payments via Paypal. The title of the Image/Page/post is dynamically used as the product name so there is no need to setup and maintain a parallel e-commerce "product catalog" like most other plugins require.
+This plugin allows you to add shopping cart functionality to single image (attachment) pages so that visitors can order prints or other merchandise of any image on your website. Specifically designed for photographers who want to enable print ordering for large image catalogs, the plugin uses the title of the image as the product name - requiring no setup of a parallel e-commerce "product catalog" (like most other plugins require). This plugin relies on the WordPress Simple Paypal Shopping Cart plugin to implement the shopping cart and accept payments via Paypal.
 
-The plugin also provides a widget, shortcode, and template functions for displaying the shopping cart on single image (attachment) pages, single Posts, and Pages.
+**Features include:**
 
-For more information on ways to use this and other PhotoPress plugins see my [WordPress For Photographers e-Book](http://wpphotog.com/product/the-guide-to-wordpress-for-photographers/ "WordPress For Photographers").
+* Custom image taxonomy for storing purchase variations (e.g. print sizes and finishes)
+* Set unique prices for each purchase variation
+* Choose purchase variations by image or for all images on your website
+* Widget for single Image/attachment page
+* Template functions
+
+**Premium Support**
+
+The PhotoPress team does not provide support for this plugin on the WordPress.org forums. One on one email support is available to users that purchase one of our [Premium Support Plans](http://www.photopressdev.com).  
+
+**The Guide To WordPress For Photographers**
+
+For more information on ways to use PhotoPress and other plugins to build a photpgraphy website check out the [WordPress For Photographers e-Book](http://wpphotog.com/product/the-guide-to-wordpress-for-photographers/ "WordPress For Photographers").
 
 == Installation ==
 
@@ -23,6 +35,7 @@ For more information on ways to use this and other PhotoPress plugins see my [Wo
 1. Create a shopping cart page for your website by creating a new Page in Wordpress add adding the `[show_wp_shopping_cart]` shortcode as its content
 1. Upload the `photopress-paypal-shopping-cart` plugin folder to your `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Add Purchase Variations using the Media > Purchase Variations admin screen. Purchase variations take the from of label:price (i.e. 11x14 Gallery Print:100)
 1. Add a sidebar to the theme template file that is used to display your single images or attachments. This can be done  by adding `<?php dynamic_sidebar('papt-image-sidebar'); ?>` to the template file (typically attachment.php or image.php).
 1. Populate this sidebar with the PhotoPress - Single Product Buy Button Widget from the `Appearance > Widgets` menu in WordPress.
 1. Configure the Widget with any pricing, shipping or variations you require.
