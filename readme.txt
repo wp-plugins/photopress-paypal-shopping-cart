@@ -1,9 +1,11 @@
 === PhotoPress - PayPal Shopping Cart ===
 Contributors: padams
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F83AGPR2W5AXS
+Donate link: http://www.photopressdev.com
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl.html
 Tags: photos, images, taxonomies, ecommerce, shopping carts, print sales, selling prints, selling photos, print ordering
 Requires at least: 3.2.1
-Tested up to: 3.8
+Tested up to: 3.8.1
 Stable tag: 1.4
 
 This plugin dynamically adds shopping cart functionality to Image Attachment Pages (or single Posts, or Pages) for use in selling prints/merchandise.
@@ -12,7 +14,7 @@ This plugin dynamically adds shopping cart functionality to Image Attachment Pag
 
 This plugin allows you to add shopping cart functionality to single image (attachment) pages so that visitors can order prints or other merchandise of any image on your website. Specifically designed for photographers who want to enable print ordering for large image catalogs, the plugin uses the title of the image as the product name - requiring no setup of a parallel e-commerce "product catalog" (like most other plugins require). This plugin relies on the WordPress Simple Paypal Shopping Cart plugin to implement the shopping cart and accept payments via Paypal.
 
-**Features include:**
+= Features include =
 
 * Custom image taxonomy for storing purchase variations (e.g. print sizes and finishes)
 * Set unique prices for each purchase variation
@@ -20,12 +22,10 @@ This plugin allows you to add shopping cart functionality to single image (attac
 * Widget for single Image/attachment page
 * Template functions
 
-**Premium Support**
-
+= Premium Support =
 The PhotoPress team does not provide support for this plugin on the WordPress.org forums. One on one email support is available to users that purchase one of our [Premium Support Plans](http://www.photopressdev.com).  
 
-**The Guide To WordPress For Photographers**
-
+= The Guide To WordPress For Photographers =
 For more information on ways to use PhotoPress and other plugins to build a photpgraphy website check out the [WordPress For Photographers e-Book](http://wpphotog.com/product/the-guide-to-wordpress-for-photographers/ "WordPress For Photographers").
 
 == Installation ==
@@ -67,8 +67,6 @@ Yes. Variations can be selected via the image's attachment page. If no local var
 Yes you can. Use the following syntax within the widget or shortcode:  `option1:$20|option2:$40|option3:$60`. *Note:* you must enter a currency symbol along with the price. 
 
 Also, This feature is implemented by this plugin and is not part of the WordPress Simple Paypal Shopping Cart plugin. Please do not bother that developer for questions/support for this feature.
-
-== Screenshots ==
 
 == Changelog ==
 
