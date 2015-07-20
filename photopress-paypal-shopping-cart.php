@@ -3,7 +3,7 @@
 /*
 Plugin Name: PhotoPress - Paypal Shopping Cart
 Plugin URI: Permalink: http://www.photopressdev.com
-Description: Dynamicaly adds shopping cart functionality to Image Attachments, Posts, or Pages. Utilizes the WordPress Simple Paypal Shopping Cart Plugin.
+Description: Dynamicaly adds shopping cart functionality to Image Attachments, Posts, or Pages. Utilizes the WordPress Simple Paypal Shopping Cart Plugin. 
 Author: Peter Adams
 Version: 1.5
 Author URI: http://www.photopressdev.com 

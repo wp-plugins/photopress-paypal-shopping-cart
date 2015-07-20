@@ -6,7 +6,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 Tags: photos, images, taxonomies, ecommerce, shopping carts, print sales, selling prints, selling photos, print ordering
 Requires at least: 3.2.1
 Tested up to: 3.8.1
-Stable tag: 1.4
+Stable tag: 1.5
 
 This plugin dynamically adds shopping cart functionality to Image Attachment Pages (or single Posts, or Pages) for use in selling prints/merchandise.
 
@@ -91,3 +91,7 @@ Adding missing sidebar registration for image page.
 = 1.4 =
 
 - fixed broken global shipping costs
+
+= 1.5 =
+
+- fixed missing product name in cart.
