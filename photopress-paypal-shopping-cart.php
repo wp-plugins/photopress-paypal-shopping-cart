@@ -90,7 +90,7 @@ class papt_spsc {
 			}
 		}
 	}
-	
+		
 	/**
 	 * Purchase From Handler
 	 *
@@ -104,46 +104,37 @@ class papt_spsc {
 		<script type="text/javascript">
 			<!--
 			//
-			var ReadForm = function( obj1, tst ) {
+
+		var photopressShoppingCart = {
+		
+			updateFields : function( selected ) {
 				
-			    // Read the user form
-		    var i,j,pos;
-		    val_total="";val_combo="";		
-		
-		    for (i=0; i<obj1.length; i++) 
-		    {     
-		        // run entire form
-		        obj = obj1.elements[i];           // a form element
-		
-		        if (obj.type == "select-one") 
-		        {   // just selects
-		            if (obj.name == "quantity" ||
-		                obj.name == "amount") continue;
-			        pos = obj.selectedIndex;        // which option selected
-			        val = obj.options[pos].value;   // selected value
-			        
-			        var val_name = "", val_price = 0;
-			        val_pieces = val.split(":");
-			        if (val_pieces.length > 1) {
-			        	val_name  = val_pieces[0];
-			        	val_price = val_pieces[1].substr(1);
-			        	obj1.elements["price"].value = val_price;
-			        } else {
-			        	val_name = val;
-			        }
-			        
-			        //val_combo = val_combo + "(" + val + ")";
-			        val_combo = val_combo + " (" + val_name + ")";
-			         
-		        }
-		    }
-			// Now summarize everything we have processed above
-			val_total = obj1.product_tmp.value + val_combo;
-			obj1.product.value = val_total;
+				jQuery("#photopress-spsc-product_name").val( selected.attr("product_name") + " (" + selected.attr("variation_name") + ")" );
+				jQuery("#photopress-spsc-price").val( selected.attr("price") );
+				jQuery("#photopress-spsc-shipping").val( selected.attr("shipping") );	
+				jQuery("#photopress-spsc-hash_one").val( selected.attr("hash_one") );
+
 			}
-			//-->
-		</script>';
+		};
 		
+		
+		// event handlers
+		jQuery( function() {
+		
+			jQuery(".wp-cart-button-form > select").change(function(){
+				
+				var selected = jQuery(this).find("option:selected");
+				photopressShoppingCart.updateFields( selected );			
+			});
+			
+			jQuery(".wp-cart-button-form").submit(function(){
+				
+				var selected = jQuery(".wp-cart-button-form > select").find("option:selected");
+				photopressShoppingCart.updateFields( selected );
+			});
+		});
+		//-->
+		</script>';
 	}
 	
 	/**
@@ -189,9 +180,21 @@ class papt_spsc {
 		$form = '';
 			
 		$form .= '<div class="wp_cart_button_wrapper">';
-		$form .= '<form method="post" class="wp-cart-button-form" action="" style="display:inline" onsubmit="return ReadForm(this, true);">';
+		//$form .= '<form method="post" class="wp-cart-button-form" action="" style="display:inline" onsubmit="return ReadForm(this, true);">';
+		$form .= '<form method="post" class="wp-cart-button-form" action="" style="display:inline" onsubmit="return;">';
 		$form .= 'Print Sizes/Types :';
-		$form .= '<select name="variation1" onchange="ReadForm (this.form, false);">';
+		//$form .= '<select name="variation1" onchange="ReadForm (this.form, false);">';
+		$form .= '<select name="variation1" onchange="">';
+		// private key used to do price validation
+		$p_key = get_option( 'wspsc_private_key_one' );
+
+		if ( empty( $p_key ) ) {
+		
+            $p_key = uniqid();
+            update_option( 'wspsc_private_key_one', $p_key );
+        }
+        
+        $hash_one = '';
 		
 		foreach ( $variations as $category => $variation ) {
 			
@@ -199,20 +202,33 @@ class papt_spsc {
 			
 			foreach ($variation as $v) {
 				
-				$options .= sprintf('<option value="%s" price="%s" shipping="%s">%s</option>', $v['name']. ': '.$v['price'], $v['price'], $v['shipping'], $v['name']. ': '.$v['price']);
+				$options .= sprintf(
+				
+					'<option value="%s" product_name= "%s" variation_name="%s" price="%s" shipping="%s" hash_one="%s">%s</option>', 
+					$v['name']. ': '.$v['price'], 
+					$product_name,
+					$v['name'],
+					$v['price'], 
+					$v['shipping'],
+					md5( $p_key. '|' . $v['price'] ),
+					$v['name']. ': '.$v['price']
+				);
 			} 
 			
 			
 			$form .= sprintf('<optgroup label="%s">%s</optgroup>', $category, $options);
 		}
-		
+			
 		$form .= '</select>';
 		$form .= '<br />';
 		$form .= sprintf('<input type="submit" value="%s" />', $addToCartLabel);
-		$form .= sprintf('<input type="hidden" name="wspsc_product" value="%s" />', $product_name);
-		$form .= '<input type="hidden" name="price" value="0" />';
-		$form .= sprintf('<input type="hidden" name="product_tmp" value="%s" />', $product_name);
-		$form .= sprintf('<input type="hidden" name="shipping" value="%s" />', $shipping );
+		$form .= sprintf('<input id="photopress-spsc-product_name" type="hidden" name="wspsc_product" value="%s" />', $product_name );
+		$form .= '<input id="photopress-spsc-price" type="hidden" name="price" value="0" />';
+		$form .= sprintf('<input type="hidden" name="product_tmp" value="%s" />', $product_name );
+		$form .= sprintf('<input id="photopress-spsc-product_shipping" type="hidden" name="shipping" value="%s" />', $shipping ); 
+		// this hidden field is used for price validation and needs to be 
+		// set by javascript based on the variation selected
+        $form .= sprintf('<input id="photopress-spsc-hash_one" type="hidden" name="hash_one" value="%s" />', $hash_one );
 		$form .= sprintf('<input type="hidden" name="cartLink" value="%s" />', cart_current_page_url() );
 		$form .= '<input type="hidden" name="addcart" value="1" />';
 		$form .= '</form>';
