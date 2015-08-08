@@ -5,8 +5,8 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: photos, images, taxonomies, ecommerce, shopping carts, print sales, selling prints, selling photos, print ordering
 Requires at least: 3.2.1
-Tested up to: 4.2.2
-Stable tag: 1.6
+Tested up to: 4.2.4
+Stable tag: 1.7
 
 This plugin dynamically adds shopping cart functionality to Image Attachment Pages (or single Posts, or Pages) for use in selling prints/merchandise.
 
@@ -99,3 +99,7 @@ Adding missing sidebar registration for image page.
 = 1.6 =
 
 - added support ofr price validations introduced by WSPSC.
+
+= 1.7 =
+
+- preparing for PHP 7.

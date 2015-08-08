@@ -5,7 +5,7 @@ Plugin Name: PhotoPress - Paypal Shopping Cart
 Plugin URI: Permalink: http://www.photopressdev.com
 Description: Dynamicaly adds shopping cart functionality to Image Attachments, Posts, or Pages. Utilizes the WordPress Simple Paypal Shopping Cart Plugin. 
 Author: Peter Adams
-Version: 1.6
+Version: 1.7
 Author URI: http://www.photopressdev.com 
 */
 
@@ -487,7 +487,7 @@ class papt_displaySingleProductBuyButtonWidget extends WP_Widget {
 		/* Widget control settings. */
 		//$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'papt-displayTax-widget' );
 		$control_ops = array('width' => 400);
-		parent::WP_Widget( false, 'PhotoPress - Purchase Image Button', $widget_ops, $control_ops);
+		parent::__construct( false, 'PhotoPress - Purchase Image Button', $widget_ops, $control_ops);
 	}
 	
 	function widget( $args, $instance ) {
